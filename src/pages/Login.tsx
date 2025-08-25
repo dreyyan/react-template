@@ -1,17 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
-import React from "react";
-
-// STYLES
-const mainDivStyle = "border-4 flex flex-col justify-center items-center w-[100%]";
-const loginDivStyle = "border-2 flex flex-col items-center mx-4 my-4 px-4 py-4 bg-gray-100";
-const formStyle = "border flex flex-col mb-2";
-const inputStyle = "border rounded-md my-2 px-2 py-1";
-const roundedButtonStyle = "border rounded-full w-[90%] mt-2 px-6 py-1 text-xl font-bold";
-const squareButtonStyle = "border rounded-md w-[40%] mt-2 py-1 text-sm font-bold";
-const h1Style = "text-7xl font-bold";
+import "../index.css";
+import Styles from "../Styles";
 
 const Login = () => {
-    // METHODS: Login
+    // METHODS: Login & Sign Up
     const navigate = useNavigate();
     const handleLogin = () => {
         
@@ -21,24 +13,47 @@ const Login = () => {
         navigate("/SignUp");
     }
 
+    // METHODS: OAuth Login
+    const handleFacebookLogin = () => {
+        alert("Logging in via Facebook...")
+    }
+
+    const handleGoogleLogin = () => {
+        alert("Logging in via Google...")
+    }
+
     return (
-    <div className={mainDivStyle}>
-        <h1 className={h1Style}>App Name</h1>
+    <div className={Styles.mainDivStyle}>
 
-        <div className={loginDivStyle}>
-            <form action="/login-form" method="POST" className={formStyle}>
-                <label htmlFor="name">Name</label>
-                <input type="text" className={inputStyle}/>
-                
-                <label htmlFor="email">Email</label>
-                <input type="text" className={inputStyle}/>
+        <div className={Styles.loginDivStyle}>
+            <h1 className={Styles.h1Style}>App Name</h1>
+            <h2 className={Styles.h2Style}>LOGIN</h2>
+            <form action="/login-form" className={Styles.formStyle}>
+                <label htmlFor="username-email" className={Styles.inputLabelStyle}>Username or Email</label>
+                <input type="text" className={Styles.inputStyle}/>
 
-                <label htmlFor="password">Password</label>
-                <input type="text" className={inputStyle}/>
+                <label htmlFor="password" className={Styles.inputLabelStyle}>Password</label>
+                <input type="password" className={Styles.inputStyle}/>
             </form>
-            <button className={roundedButtonStyle} onClick={handleLogin}>Login</button>
-            <h4>or</h4>
-            <button className={squareButtonStyle} onClick={handleSignUp}>Sign Up</button>
+            <button type="button" className={Styles.roundedButtonStyle} onClick={handleLogin}>Login</button>
+            <h4>or login with</h4>
+            <div className={Styles.oAuthDivStyle}>
+                <button type="button" onClick={handleFacebookLogin}>
+                    <img
+                    src="/fb-icon.png"
+                    alt="Facebook Login"
+                    className="w-8 h-8"
+                    />
+                </button>
+                <button type="button" onClick={handleGoogleLogin}>
+                    <img
+                    src="/google-icon.png"
+                    alt="Google Login"
+                    className="w-8 h-8"
+                    />
+                </button>
+            </div>
+            <button type="button" className={Styles.squareButtonStyle} onClick={handleSignUp}>Sign Up</button>
         </div>
     </div>
   );
