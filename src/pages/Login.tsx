@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../index.css";
 import Styles from "../Styles";
 
@@ -6,7 +6,7 @@ const Login = () => {
     // METHODS: Login & Sign Up
     const navigate = useNavigate();
     const handleLogin = () => {
-        
+        navigate("/Dashboard")
     }
 
     const handleSignUp = () => {
@@ -24,7 +24,6 @@ const Login = () => {
 
     return (
     <div className={Styles.mainDivStyle}>
-
         <div className={Styles.loginDivStyle}>
             <h1 className={Styles.h1Style}>App Name</h1>
             <h2 className={Styles.h2Style}>LOGIN</h2>
