@@ -4,7 +4,7 @@ import Styles from "../Styles";
 import { useState } from "react";
 
 // Components
-import PopUpModal from "../components/PopUpModal"
+import PopUpModal from "../components/buttons/PopUpModal"
 
 const SignUp = () => {
     // States
