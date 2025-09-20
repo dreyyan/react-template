@@ -35,7 +35,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 ### 4. Install `tailwindcss` (fast styling):
 ``` powershell
-npm install tailwindcss @tailwindcss/vite
+npm install -D tailwindcss postcss autoprefixer
 ```
 
 - Then, update `vite.config.ts`:
@@ -72,7 +72,7 @@ export default {
 }
 ```
 
--Then, `index.css`:
+-Then, clear `src/index.css` and add:
 ``` css
 @import "tailwindcss";
 ```
@@ -93,7 +93,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 ### 1. Remove `src/assets`, `src/App.css`
 ### 2. Clear `index.css`, `App.tsx`
 ### 3. Create `src/pages` (if routing needed)
-### 4. Add routing in `App.tsx` (optional):
+### 4. Clear `App.tsx` and add routing (optional):
 ``` typescript
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
