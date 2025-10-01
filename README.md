@@ -36,6 +36,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 ### 4. Install `tailwindcss` (fast styling):
 ``` powershell
 npm install -D tailwindcss postcss autoprefixer
+npm install -D @tailwindcss/vite
 ```
 
 - Then, update `vite.config.ts`:
