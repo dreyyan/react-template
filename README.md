@@ -71,7 +71,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 ### 4. Install `tailwindcss` (Easy & Lightweight Styling):
 ``` bash
-npm install tailwindcss @tailwindcss/vite
+npm install -D tailwindcss postcss autoprefixer
+npm install -D @tailwindcss/vite
 ```
 
 - Then, update `vite.config.ts`:
@@ -108,7 +109,7 @@ export default {
 }
 ```
 
--Then, `index.css`:
+-Then, clear `src/index.css` and add:
 ``` css
 @import "tailwindcss";
 ```
