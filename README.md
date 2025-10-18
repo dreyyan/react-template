@@ -3,38 +3,74 @@
 ## DIRECTIONS
 ### 1. Create vite project:
 #### a. in a new folder:
-``` powershell
+``` bash
 npm create vite@latest {project-name} -- --template react-ts
 ```
 #### b. inside the current folder:
 
-``` powershell
+``` bash
 npm create vite@latest . -- --template react-ts
 ```
+### 2. Select framework `React`:
+```bash
+◆  Select a framework:
+│  ○ Vanilla
+│  ○ Vue
+│  ● React
+│  ○ Preact
+│  ○ Lit
+│  ○ Svelte
+│  ○ Solid
+│  ○ Qwik
+│  ○ Angular
+│  ○ Marko
+│  ○ Others
+```
 
+### 3. Select variant `TypeScript`:
+```bash
+◆  Select a variant:
+│  ● TypeScript
+│  ○ TypeScript + React Compiler
+│  ○ TypeScript + SWC
+│  ○ JavaScript
+│  ○ JavaScript + React Compiler
+│  ○ JavaScript + SWC
+│  ○ React Router v7 ↗
+│  ○ TanStack Router ↗
+│  ○ RedwoodSDK ↗
+│  ○ RSC ↗
+```
+
+### 4. Click the link to your React website shown in the terminal:
+```bash
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+```
 ## INSTALLATION
-### 1. `npm (node package manager)`:
-``` powershell
+### 1. `npm (Node Package Manager)`:
+``` bash
 npm install
 ```
 
-### 2. `react-router-dom` (opt.)
-``` powershell
+### 2. `react-router-dom` (Route Handling)
+``` bash
 npm install react-router-dom
 ```
 
-### 3. Install `fontsawesome` (font assets):
-``` powershell
+### 3. Install `fontsawesome` (Font Assets):
+``` bash
 npm install @fortawesome/fontawesome-free
 ```
 
-- Then, update {Component} / `Main.css`:
+- Then, import to your main component (e.g. `Home.tsx`):
 ``` css
 import '@fortawesome/fontawesome-free/css/all.min.css';
 ```
 
-### 4. Install `tailwindcss` (fast styling):
-``` powershell
+### 4. Install `tailwindcss` (Easy & Lightweight Styling):
+``` bash
 npm install tailwindcss @tailwindcss/vite
 ```
 
@@ -79,8 +115,8 @@ export default {
 
 - Then, add `src/Styles.ts`
 
-### 5. Install `bootstrap` (component presets)
-``` powershell
+### 5. Install `bootstrap` [Opt.](Component Presets)
+``` bash
 npm install react-bootstrap bootstrap
 ```
 
@@ -91,9 +127,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 ## CLEANING
 ### 1. Remove `src/assets`, `src/App.css`
-### 2. Clear `index.css`, `App.tsx`
-### 3. Create `src/pages` (if routing needed)
-### 4. Add routing in `App.tsx` (optional):
+### 2. Clear content of `index.css`, `App.tsx`  (if not yet updated)
+### 3. Create folder `src/pages`
+### 4. Add routing in `App.tsx` [Opt.]:
 ``` typescript
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
