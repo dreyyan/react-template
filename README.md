@@ -110,6 +110,7 @@ export default {
 ```
 
 -Then, clear `src/index.css` and add:
+-Then, clear `src/index.css` and add:
 ``` css
 @import "tailwindcss";
 ```
